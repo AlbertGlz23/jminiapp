@@ -28,15 +28,18 @@ The code is organized into distinct packages to separate concerns (Model, State,
 - `todo/`
   - `pom.xml`
   - `README.md`
-  - `src/main/java/com/jminiapp/examples/todo/`
-    - `ToDoApp.java` — Main application logic, menu rendering, and I/O handling
-    - `ToDoAppRunner.java` — Bootstrap configuration and entry point
-    - `model/`
-      - `ToDoItem.java` — The core Data Model for a single task (ID, description, completed status)
-    - `state/`
-      - `ToDoState.java` — The central Application State container (holds the List<ToDoItem>)
-    - `adapter/`
-      - `ToDoJSONAdapter.java` — JSON format adapter for serialization/deserialization
+  - `src/main/java`
+    - `resources`
+      - `TaskList.json` - List of tasks exported by the main program and used to import states previously exporteds
+    - `com/jminiapp/examples/todo/`
+      - `ToDoApp.java` — Main application logic, menu rendering, and I/O handling
+      - `ToDoAppRunner.java` — Bootstrap configuration and entry point
+      - `model/`
+        - `ToDoItem.java` — The core Data Model for a single task (ID, description, completed status)
+      - `state/`
+        - `ToDoState.java` — The central Application State container (holds the List<ToDoItem>)
+      - `adapter/`
+        - `ToDoJSONAdapter.java` — JSON format adapter for serialization/deserialization
 
 ## Key Components
 
@@ -108,12 +111,10 @@ Loaded 2 existing tasks.
 
 --- To-Do Tasks ---
 
- Buy coffee beans
+ [ ] Buy coffee beans
 
- Deploy new feature
+ [ ] Deploy new feature
 
-markdown
-Copiar código
 
 ### Menu Options
 
@@ -132,12 +133,10 @@ Copiar código
 
 --- To-Do Tasks ---
 
- Buy coffee beans
+ [X] Buy coffee beans
 
- Deploy new feature
+ [ ] Deploy new feature
 
-markdown
-Copiar código
 
 ### Delete Task
 
